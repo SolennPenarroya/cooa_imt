@@ -23,7 +23,7 @@ Counter >> decrement [
 	count := count - 1
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'API' }
 Counter >> increment [
 	count := count + 1
 ]
