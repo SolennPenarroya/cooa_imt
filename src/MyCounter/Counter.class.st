@@ -9,13 +9,23 @@ Class {
 }
 
 { #category : 'accessing' }
+Counter class >> startingAt: anInteger [
+	"^ self new count: anInteger ; yourself"
+	| aCounter |
+	aCounter := self new.
+	aCounter count: anInteger.
+	^ aCounter 
+]
+
+{ #category : 'accessing' }
 Counter >> count [
 	^ count
 ]
 
 { #category : 'accessing' }
 Counter >> count: anInteger [
-	count := anInteger
+	count := anInteger.
+	^ 666
 ]
 
 { #category : 'API' }
