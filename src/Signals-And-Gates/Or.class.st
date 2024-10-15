@@ -5,3 +5,13 @@ Class {
 	#package : 'Signals-And-Gates',
 	#tag : 'Objects'
 }
+
+{ #category : 'accessing' }
+Or >> firstInput: aSource [ 
+	^ aSource 
+]
+
+{ #category : 'as yet unclassified' }
+Or >> secondInput: aSource [ 
+	^ aSource 
+]

@@ -5,3 +5,8 @@ Class {
 	#package : 'Signals-And-Gates',
 	#tag : 'Objects'
 }
+
+{ #category : 'public' }
+Fan >> input: anAnd [ 
+	^ anAnd 
+]

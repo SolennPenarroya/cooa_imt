@@ -5,3 +5,8 @@ Class {
 	#package : 'Signals-And-Gates',
 	#tag : 'Objects'
 }
+
+{ #category : 'public' }
+And >> input: anOr [ 
+	^ anOr 
+]
