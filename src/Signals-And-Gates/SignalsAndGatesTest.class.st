@@ -7,5 +7,5 @@ Class {
 
 { #category : 'tests' }
 SignalsAndGatesTest >> testValue [
-	HighSignal new value equals: 1
+	HighSignal new value = 1
 ]
