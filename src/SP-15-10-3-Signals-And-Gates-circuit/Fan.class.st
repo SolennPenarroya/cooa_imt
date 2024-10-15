@@ -1,8 +1,8 @@
 Class {
 	#name : 'Fan',
 	#superclass : 'Object',
-	#category : 'Signals-And-Gates-circuit',
-	#package : 'Signals-And-Gates-circuit'
+	#category : 'SP-15-10-3-Signals-And-Gates-circuit',
+	#package : 'SP-15-10-3-Signals-And-Gates-circuit'
 }
 
 { #category : 'public' }
