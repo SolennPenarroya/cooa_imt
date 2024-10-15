@@ -15,12 +15,12 @@ super initialize.
 state := HighSignal new
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'operations' }
 Source >> off [
 state := LowSignal new 
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'operations' }
 Source >> on [
 state := HighSignal new
 ]
