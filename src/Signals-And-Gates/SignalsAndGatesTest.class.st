@@ -7,7 +7,9 @@ Class {
 
 { #category : 'tests' }
 SignalsAndGatesTest >> testAnd [
- self 
+self assert: (HighSignal new and: HighSignal new value) value equals: HighSignal new value.
+self assert: (LowSignal new and: HighSignal new value) value equals: LowSignal new value.
+self assert: (LowSignal new and: LowSignal new value) value equals: LowSignal new value
 ]
 
 { #category : 'tests' }
@@ -18,7 +20,9 @@ SignalsAndGatesTest >> testNot [
 
 { #category : 'tests' }
 SignalsAndGatesTest >> testOr [
-self assert: (HighSignal new or: LowSignal new value) value equals: HighSignal new value
+self assert: (HighSignal new or: LowSignal new value) value equals: HighSignal new value.
+self assert: (LowSignal new or: HighSignal new value) value equals: HighSignal new value.
+self assert: (LowSignal new or: LowSignal new value) value equals: LowSignal new value
 ]
 
 { #category : 'tests' }
