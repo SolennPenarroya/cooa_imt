@@ -6,6 +6,15 @@ Class {
 }
 
 { #category : 'tests' }
+SourceTest >> testInitialisation [
+
+	| sourceSecurity |
+	sourceSecurity := Source new.
+
+	self assert: sourceSecurity state value equals: 1
+]
+
+{ #category : 'tests' }
 SourceTest >> testOff [
 |source|
 source := Source new.
