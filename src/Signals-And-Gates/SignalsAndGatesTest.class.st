@@ -6,6 +6,22 @@ Class {
 }
 
 { #category : 'tests' }
+SignalsAndGatesTest >> testAnd [
+ self 
+]
+
+{ #category : 'tests' }
+SignalsAndGatesTest >> testNot [
+ self assert: HighSignal new not value equals: LowSignal new value 
+"on compare les valeurs et pas l'objet directement sinon, comparaison d'identité fausse"
+]
+
+{ #category : 'tests' }
+SignalsAndGatesTest >> testOr [
+self assert: (HighSignal new or: LowSignal new value) value equals: HighSignal new value
+]
+
+{ #category : 'tests' }
 SignalsAndGatesTest >> testValue [
-	HighSignal new value = 1
+	self assert: HighSignal new value equals: 1
 ]
