@@ -1,6 +1,6 @@
 Class {
 	#name : 'Or',
-	#superclass : 'Object',
+	#superclass : 'Gate2Inputs',
 	#category : '15-10-3-Signals-And-Gates-circuit',
 	#package : '15-10-3-Signals-And-Gates-circuit'
 }

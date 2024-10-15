@@ -1,11 +1,9 @@
 Class {
-	#name : 'And',
-	#superclass : 'Gate2Inputs',
+	#name : 'Component',
+	#superclass : 'Object',
+	#instVars : [
+		'id'
+	],
 	#category : '15-10-3-Signals-And-Gates-circuit',
 	#package : '15-10-3-Signals-And-Gates-circuit'
 }
-
-{ #category : 'public' }
-And >> input: anOr [ 
-	^ anOr 
-]
