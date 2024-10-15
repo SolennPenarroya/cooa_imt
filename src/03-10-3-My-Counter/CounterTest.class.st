@@ -1,8 +1,8 @@
 Class {
 	#name : 'CounterTest',
 	#superclass : 'TestCase',
-	#category : 'MyCounter',
-	#package : 'MyCounter'
+	#category : '03-10-3-My-Counter',
+	#package : '03-10-3-My-Counter'
 }
 
 { #category : 'tests' }

@@ -1,8 +1,8 @@
 Class {
 	#name : 'HighSignal',
 	#superclass : 'LogicalSignal',
-	#category : 'Signals-And-Gates',
-	#package : 'Signals-And-Gates'
+	#category : '15-10-3-Signals-And-Gates',
+	#package : '15-10-3-Signals-And-Gates'
 }
 
 { #category : 'controlling' }

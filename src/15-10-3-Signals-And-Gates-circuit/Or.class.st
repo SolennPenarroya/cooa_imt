@@ -1,8 +1,8 @@
 Class {
 	#name : 'Or',
 	#superclass : 'Object',
-	#category : 'Signals-And-Gates-circuit',
-	#package : 'Signals-And-Gates-circuit'
+	#category : '15-10-3-Signals-And-Gates-circuit',
+	#package : '15-10-3-Signals-And-Gates-circuit'
 }
 
 { #category : 'accessing' }
