@@ -14,14 +14,14 @@ Class {
 { #category : 'as yet unclassified' }
 Unit >> attack: anEnnemi [
 
-	anEnnemi health: anEnnemi health - self attackUnitPower.
+	anEnnemi health: anEnnemi health - (self attackUnitPower* experience ).
 	self health: self health - anEnnemi defenseUnitPower
 ]
 
 { #category : 'accessing' }
 Unit >> attackUnitPower [
 
-	^ attackUnitPower
+	^ attackUnitPower * ((self experience*0.5)+0.5) 
 ]
 
 { #category : 'accessing' }
@@ -37,9 +37,9 @@ Unit >> experience [
 ]
 
 { #category : 'accessing' }
-Unit >> experience: anObject [
+Unit >> experience: anInt [
 
-	experience := anObject
+	experience := anInt
 ]
 
 { #category : 'accessing' }
