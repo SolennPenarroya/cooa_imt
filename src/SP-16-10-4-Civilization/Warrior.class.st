@@ -11,9 +11,21 @@ Warrior >> attack: anEnnemi [
 	anEnnemi defendAgainstWarrior: self
 ]
 
+{ #category : 'as yet unclassified' }
+Warrior >> defendAgainstArcher: anArcher [
+
+	
+]
+
 { #category : 'fighting' }
 Warrior >> defendAgainstKnight: aKnight [
 	 
+]
+
+{ #category : 'as yet unclassified' }
+Warrior >> defendAgainstPike: aPike [
+
+	
 ]
 
 { #category : 'initialization' }
