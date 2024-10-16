@@ -5,13 +5,36 @@ Class {
 	#package : 'SP-16-10-4-Civilization'
 }
 
-{ #category : 'as yet unclassified' }
+{ #category : 'fighting' }
 Warrior >> attack: anEnnemi [
 
 	anEnnemi defendAgainstWarrior: self
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'fighting' }
+Warrior >> counterAgainstArcher: anArcher [
+
+	
+]
+
+{ #category : 'fighting' }
+Warrior >> counterAgainstKnight: aKnight [
+
+	
+]
+
+{ #category : 'fighting' }
+Warrior >> counterAgainstPike: aPike [
+
+	
+]
+
+{ #category : 'fighting' }
+Warrior >> counterAgainstWarrior: aWarrior [
+	
+]
+
+{ #category : 'fighting' }
 Warrior >> defendAgainstArcher: anArcher [
 
 	
@@ -22,8 +45,14 @@ Warrior >> defendAgainstKnight: aKnight [
 	 
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'fighting' }
 Warrior >> defendAgainstPike: aPike [
+
+	
+]
+
+{ #category : 'fighting' }
+Warrior >> defendAgainstWarrior: aWarrior [
 
 	
 ]

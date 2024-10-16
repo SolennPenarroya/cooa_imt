@@ -48,3 +48,14 @@ CivilisationTest >> testCombatWarriorFlatTerrain [
 	self assert: w health equals: 90.
 	
 ]
+
+{ #category : 'tests' }
+CivilisationTest >> testFightBetweenArcherAndKnightLevel1 [
+
+	| a k |
+	a := Archer new.
+	k := Knight new.
+	a attack: k.
+	self assert: k health equals: 80.
+	self assert: a health equals: 95.
+]

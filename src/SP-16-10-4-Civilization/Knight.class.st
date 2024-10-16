@@ -5,24 +5,53 @@ Class {
 	#package : 'SP-16-10-4-Civilization'
 }
 
-{ #category : 'as yet unclassified' }
+{ #category : 'fighting' }
 Knight >> attack: anEnnemi [
 
 	anEnnemi defendAgainstKnight: self
 ]
 
-{ #category : 'as yet unclassified' }
-Knight >> defendAgainstArcher: anArcher [
+{ #category : 'fighting' }
+Knight >> counterAgainstArcher: anArcher [
+
 	
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'fighting' }
+Knight >> counterAgainstKnight: aKnight [
+]
+
+{ #category : 'fighting' }
+Knight >> counterAgainstPike: aPike [
+
+	
+]
+
+{ #category : 'fighting' }
+Knight >> counterAgainstWarrior: aWarrior [
+	
+]
+
+{ #category : 'fighting' }
+Knight >> defendAgainstArcher: anArcher [
+	"est attaqué par puis riposte"
+	self health: self health - (anArcher attackUnitPower).
+	anArcher counterAgainstKnight: self
+]
+
+{ #category : 'fighting' }
+Knight >> defendAgainstKnight: aKnight [
+
+	
+]
+
+{ #category : 'fighting' }
 Knight >> defendAgainstPike: aPike [
 
 	
 ]
 
-{ #category : 'as yet unclassified' }
+{ #category : 'fighting' }
 Knight >> defendAgainstWarrior: aWarrior [
 
 	
@@ -30,9 +59,9 @@ Knight >> defendAgainstWarrior: aWarrior [
 
 { #category : 'initialization' }
 Knight >> initialize [
-
+	super initialize.
 	health := 100.
 	experience := 1.
 	attackUnitPower := 20.
-	defenseUnitPower := 5.
+	defenseUnitPower := 5
 ]

@@ -57,9 +57,9 @@ Unit >> health: anInteger [
 
 { #category : 'initialization' }
 Unit >> initialize [
-
+	super initialize.
 	health := 100.
 	experience := 1.
 	attackUnitPower := 0.
-	defenseUnitPower := 0.
+	defenseUnitPower := 0
 ]
