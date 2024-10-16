@@ -8,6 +8,17 @@ Class {
 	#package : 'SP-16-10-1-Robots'
 }
 
+{ #category : 'accessing' }
+RbsRobot >> direction [
+^ direction 
+]
+
+{ #category : 'accessing' }
+RbsRobot >> direction: aDirection [
+direction := aDirection 
+
+]
+
 { #category : 'initialization' }
 RbsRobot >> initialize [ 
    "set default direction to east"
