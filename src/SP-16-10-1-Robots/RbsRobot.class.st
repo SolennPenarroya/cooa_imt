@@ -43,16 +43,39 @@ RbsRobot >> initialize [
 
 { #category : 'accessing' }
 RbsRobot >> move: anInteger [
-	"Move le robot d'une distance, maj sa position et restore le sol précédent"
+    | newPosition |
+    "Compute the new position based on the robot's direction"
+    newPosition := self computeNewPosition: anInteger.
 
-	| newPosition |
-	newPosition := self computeNewPosition: anInteger.
+    "Put the ground tile back at the old position"
+    self board atX: self x atY: self y put: (RbsGround new x: self x y: self y).
 
-	"Remettre le sol à la position actuelle du robot "
-	self board atX: self x atY: self y put: previousTile.
+    "Get the tile at the new position"
+    previousTile := self board atX: newPosition x atY: newPosition y.
 
-	"Maj position"
-	previousTile := self board atPosition: newPosition.
-	self board atX: newPosition x atY: newPosition y put: self.
-	self x: newPosition x y: newPosition y
+    "Move the robot to the new position"
+    self board atX: newPosition x atY: newPosition y put: self.
+
+    "Update the robot's position"
+    self x: newPosition x.
+    self y: newPosition y.
+
+]
+
+{ #category : 'accessing' }
+RbsRobot >> x [
+
+	^ x.
+]
+
+{ #category : 'instance creation' }
+RbsRobot >> x: aNumber y: bNumber [
+    x := aNumber.
+    y := bNumber.
+]
+
+{ #category : 'accessing' }
+RbsRobot >> y [
+
+	^ y.
 ]

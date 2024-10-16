@@ -57,6 +57,28 @@ RbsRobotTest >> testRobotDefaultDirection [
 ]
 
 { #category : 'tests' }
+RbsRobotTest >> testRobotMove [
+    | rb b |
+    rb := RbsRobot new.
+    b := RbsBoard new.
+    rb setBoard: b.
+    rb x: 4 y: 1.
+
+    "Assert the robot starts at position (4, 1)"
+    self assert: (rb board atX: 4 atY: 1) equals: rb.
+
+    "Move the robot 10 steps"
+    rb move: 10.
+
+    "Check that the tile at the old position is now a ground tile"
+    self assert: (rb board atX: 4 atY: 1) class equals: RbsGround.
+
+    "Ensure the robot is now at the new position"
+    self assert: (rb board atX: 14 atY: 1) equals: rb.
+
+]
+
+{ #category : 'tests' }
 RbsRobotTest >> testRobotMoveEast [
 
 	| rb b |
