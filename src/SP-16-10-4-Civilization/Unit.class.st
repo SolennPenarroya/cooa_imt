@@ -14,8 +14,9 @@ Class {
 { #category : 'as yet unclassified' }
 Unit >> attack: anEnnemi [
 
-	anEnnemi health: anEnnemi health - (self attackUnitPower* experience ).
-	self health: self health - anEnnemi defenseUnitPower
+	self subclassResponsibility 
+	"anEnnemi health: anEnnemi health - (self attackUnitPower* experience ).
+	self health: self health - anEnnemi defenseUnitPower"
 ]
 
 { #category : 'accessing' }

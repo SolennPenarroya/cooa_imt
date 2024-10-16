@@ -6,6 +6,25 @@ Class {
 }
 
 { #category : 'tests' }
+CivilisationTest >> testAttackingPowerForKnightLevel3 [
+
+	| k |
+	k := Knight new.
+	k experience: 3.
+	self assert: k attackUnitPower equals: 40
+]
+
+{ #category : 'tests' }
+CivilisationTest >> testAttackingPowerForWarriorLevel2 [
+
+	| w |
+	w := Warrior new.
+	w experience: 2.
+	self assert: w attackUnitPower equals: 15.
+	
+]
+
+{ #category : 'tests' }
 CivilisationTest >> testCombatKnightTwoWarriorThreeHillyTerrain [
 
 	| k w |
@@ -14,7 +33,7 @@ CivilisationTest >> testCombatKnightTwoWarriorThreeHillyTerrain [
 	w := Warrior new.
 	w experience: 3.
 	k attack: w.
-	self assert: w health equals: 80.
+	self assert: w health equals: 70.
 	self assert: k health equals: 90
 ]
 
@@ -28,16 +47,4 @@ CivilisationTest >> testCombatWarriorFlatTerrain [
 	self assert: w2 health equals: 90.
 	self assert: w health equals: 90.
 	
-]
-
-{ #category : 'tests' }
-CivilisationTest >> testLevel [
-
-	| w k |
-	w := Warrior new.
-	k := Knight new.
-	w experience: 2.
-	k experience: 3.
-	self assert: w attackUnitPower equals: 15.
-	self assert: k attackUnitPower equals: 40.
 ]
