@@ -1,26 +1,32 @@
 ```smalltalk
-| space gridSize squareSize |
+| gridSize squareSize space grid randomColor |
 
 gridSize := 10.
 squareSize := 50.
 
-space := BlSpace new.
-space extent: (gridSize * squareSize) @ (gridSize * squareSize).
+grid := BlElement new
+    geometry: BlRectangleGeometry new;
+    size: (gridSize * squareSize) @ (gridSize * squareSize);
+    background: Color white;
+    yourself.
 
-1 to: gridSize do: [ :row | 
-    1 to: gridSize do: [ :col |
-        | square randomColor |
-        square := BlElement new.
+1 to: gridSize do: [:i |
+    1 to: gridSize do: [:j |
+        | square |
         randomColor := Color random.
-
-        square
-            extent: squareSize @ squareSize;    
-            position: (col - 1) * squareSize @ (row - 1) * squareSize; 
-            background: randomColor.                
-        space root addChild: square.
+        square := BlElement new
+            geometry: BlRectangleGeometry new;
+            size: squareSize @ squareSize;
+            background: randomColor;
+            yourself.
+        square position: ((i - 1) * squareSize) @ ((j - 1) * squareSize).
+        grid addChild: square.
     ].
 ].
 
-space show. 
+space := BlSpace new.
+space root addChild: grid.
+
+space show.
 
 ```
