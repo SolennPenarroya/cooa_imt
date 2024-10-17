@@ -25,26 +25,22 @@ grid := BlElement new
         square position: ((j - 1) * squareSize) @ ((i - 1) * squareSize).
         grid addChild: square.
 
-        "Créer le premier cercle"
         circle1 := BlElement new
             geometry: BlEllipseGeometry new;
             size: (squareSize / 2) @ (squareSize / 2);  "Taille du cercle"
             background: Color white;  "Couleur blanche"
             yourself.
 
-        "Positionner le premier cercle au centre du carré"
         circle1 position: ((j - 1) * squareSize + (squareSize / 4)) @ ((i - 1) * squareSize + (squareSize / 4)).
         grid addChild: circle1.
 
-        "Créer le deuxième cercle, plus grand et plus clair"
         circle2 := BlElement new
             geometry: BlEllipseGeometry new;
-            size: ((squareSize / 2) + 10) @ ((squareSize / 2) + 10);  "Taille du cercle plus grand"
-            background: (Color white alpha: 0.5);  "Couleur blanche avec opacité"
+            size: ((squareSize / 2) + 10) @ ((squareSize / 2) + 10);  
+            background: (Color white alpha: 0.5); 
             yourself.
 
-        "Positionner le deuxième cercle au centre du carré"
-        circle2 position: ((j - 1) * squareSize + (squareSize / 4) - 5) @ ((i - 1) * squareSize + (squareSize / 4) - 5).  "Décalage pour centrer"
+        circle2 position: ((j - 1) * squareSize + (squareSize / 4) - 5) @ ((i - 1) * squareSize + (squareSize / 4) - 5).  
         grid addChild: circle2.
     ].
 ].
