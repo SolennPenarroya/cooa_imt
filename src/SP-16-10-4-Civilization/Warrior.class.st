@@ -14,47 +14,56 @@ Warrior >> attack: anEnnemi [
 { #category : 'fighting' }
 Warrior >> counterAgainstArcher: anArcher [
 
-	
+	self health: self health - anArcher defenseUnitPower
 ]
 
 { #category : 'fighting' }
 Warrior >> counterAgainstKnight: aKnight [
 
 	
+	self health: self health - aKnight defenseUnitPower
 ]
 
 { #category : 'fighting' }
 Warrior >> counterAgainstPike: aPike [
 
 	
+	self health: self health - aPike defenseUnitPower
 ]
 
 { #category : 'fighting' }
 Warrior >> counterAgainstWarrior: aWarrior [
+
 	
+	self health: self health - aWarrior defenseUnitPower
 ]
 
 { #category : 'fighting' }
 Warrior >> defendAgainstArcher: anArcher [
 
-	
+	self health: self health - anArcher attackUnitPower.
+	anArcher counterAgainstWarrior: self
 ]
 
 { #category : 'fighting' }
 Warrior >> defendAgainstKnight: aKnight [
-	 
+
+	self health: self health - aKnight attackUnitPower.
+	aKnight counterAgainstWarrior: self
 ]
 
 { #category : 'fighting' }
 Warrior >> defendAgainstPike: aPike [
 
-	
+	self health: self health - aPike attackUnitPower.
+	aPike counterAgainstWarrior: self
 ]
 
 { #category : 'fighting' }
 Warrior >> defendAgainstWarrior: aWarrior [
 
-	
+	self health: self health - aWarrior attackUnitPower.
+	aWarrior counterAgainstWarrior: self
 ]
 
 { #category : 'initialization' }

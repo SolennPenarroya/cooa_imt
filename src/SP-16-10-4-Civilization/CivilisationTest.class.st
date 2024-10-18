@@ -6,6 +6,19 @@ Class {
 }
 
 { #category : 'tests' }
+CivilisationTest >> test [
+
+	| k w |
+	k := Knight new.
+	k experience: 2.
+	w := Warrior new.
+	w experience: 3.
+	k attack: w.
+	self assert: w health equals: 70.
+	self assert: k health equals: 90
+]
+
+{ #category : 'tests' }
 CivilisationTest >> testAttackingPowerForKnightLevel3 [
 
 	| k |
@@ -25,7 +38,7 @@ CivilisationTest >> testAttackingPowerForWarriorLevel2 [
 ]
 
 { #category : 'tests' }
-CivilisationTest >> testCombatKnightTwoWarriorThreeHillyTerrain [
+CivilisationTest >> testCombatKnight2Warrior3 [
 
 	| k w |
 	k := Knight new.

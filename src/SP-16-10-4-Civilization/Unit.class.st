@@ -28,7 +28,7 @@ Unit >> attackUnitPower [
 { #category : 'accessing' }
 Unit >> defenseUnitPower [
 
-	^ defenseUnitPower
+	^ defenseUnitPower * (self experience * 0.5 + 0.5)
 ]
 
 { #category : 'accessing' }
